@@ -1,2 +1,128 @@
-<p>{{hero}}</p>
-<input [(ngModel)]="hero" placeholder="name">
+<!-- <!-- <p>{{hero}}</p>
+<input [(ngModel)]="hero" placeholder="name">ig -->
+<!-- <div class="teal center">
+    <h1> HeyLoo World</h1>
+</div>
+<div class="row">
+    <div class="col l12 center grey">Hey There</div>
+</div>
+<div class="row">
+    <div class="left-align">Show on the left side</div>
+    <div class="right-align">Show on the right side</div>
+    <div class="center">This is the center of the text</div>
+</div>
+
+<div class="row col m12">
+    <div class="col l12 m6 s12">
+        <div class="card-panel hoverable green accent-2">
+            <p>
+                This is actually hoverable text with a unqiue one
+            </p>
+        </div>
+    </div>
+    <div class="col l12 m6 s12">
+        <div class="card-panel hoverable blue darken-1">
+            <p>
+                Making this next to the other one
+            </p>
+        </div>
+    </div>
+</div>
+<div class="hide-on-small-only">
+    <p>This must be hidden in small devices, or else i will kill u</p>
+</div>
+<div class="row">
+    <div class="z-depth-4 col m4">
+        <blockquote>Say This is the z-dpeth in the world there are few things to be scared of those things might be the fact that you
+            don't have anything. Am writing this just to try something wiht this dumb dumbd</blockquote>
+    </div>
+</div>
+
+<div class="row">
+    <div id="dropdown" class="dropdown-content">
+        <ul>
+            <a href="#">Inbox</a>
+        </ul>
+        <ul>
+            <a href="#">Sent Mail</a>
+        </ul>
+        <ul>
+            <a href="#">Spam</a>
+        </ul>
+        <ul>
+            <a href="#">draft</a>
+        </ul>
+    </div>
+</div>
+<a class="btn dropdown-button" href="#" data-activates="dropdown">
+    Dropdown
+    <i class="mdi-navigation-arrow-drop-down right"></i>
+</a>
+
+<div class="row">
+    <div id="dropdown_material" class="dropdown-content">
+        <ul>
+            <a href="#">One<span class="badge">1</span> </a>
+        </ul>
+        <ul>
+            <a href="#">Two<span class="new badge">2</span></a>
+        </ul>
+        <ul>
+            <a href="#">Three<span class="badge">3</span></a>
+        </ul>
+    </div>t
+</div>
+<a class="btn dropdown-button" href="#" data-activates="dropdown_material">
+    Dropdown
+</a>
+<button class="btn grey  waves-effect waves-teals">
+    Say Hey
+</button -->
+<!-- <div class="row">
+    <div class="col m4 center ">
+        <input type="text" [(ngModel)]="twoWayBinding">
+    </div>
+</div>
+<div class="row">
+    <p>{{twoWayBinding}}</p>
+</div>  -->
+<!-- <app-header></app-header> -->
+
+<!-- <div class="row">
+    <div class="col m6 center-align">
+        <button class="waves-effect waves-light btn " [disabled]="!allowedToTouch" (click)="onCreateSomething()">Add server</button>
+    </div>
+    <div class="col m6">
+        <p>Server status:- {{ serverStatus }}</p>
+    </div>
+</div>
+<h6 class="col md6 center">
+    This is practicing string interpolation
+    <br> my name is {{ getFName() }}. and my department is {{ getDepartment() }}
+</h6> -->
+
+<div class="row ">
+    <div class="col md6 center rowProperty">
+        <h1>Sign in Page</h1>
+        <input type="text" name="userName" placeholder="Username" (input) ="sendUserInput($event)" >
+        <input type="password" name="password" placeholder="Password" (input) = "sendUserPassword($event)">
+        <input type="number" name="number" placeholder="Please Insert Your number" [(ngModel)]= "initialPhoneNUmber">
+        <button class="waves-effect waves-light btn" (click)="successful()" >Sign In</button>
+
+        <h3 *ngIf="successfulEnter; else notFilled">The form you filled is {{ showString }} </h3>
+
+        <ng-template #notFilled>
+            <h3>
+                Please fill in the form above.
+            </h3>
+
+        </ng-template>
+        <h3>The true status of the item {{ successfulEnter }}</h3>
+        <h3>This is the user name that i have got {{ seeTheUserInputs() }}</h3>
+
+
+    </div>
+
+    <!-- <button class="waves-effect waves-light btn " [disabled]="!allowedToTouch" (click)="onCreateSomething()">Add server</button> -->
+
+</div>

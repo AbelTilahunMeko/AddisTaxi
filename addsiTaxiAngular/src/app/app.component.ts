@@ -5,7 +5,11 @@ import { FormsModule } from '@angular/forms';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  styles: [`
+    .online{
+      color:green
+    }
+  `]
 })
 export class AppComponent {
   allowedToTouch = false;
@@ -23,13 +27,25 @@ export class AppComponent {
 
   showString: String = 'Please fill in the forms';
 
-
   successfulEnter = false;
+
+  serverStatusToShow: String = 'Online';
+  onlineServerStatus = true;
+
 
   constructor() {
     setTimeout( () => {
       this.allowedToTouch  = true;
     }, 2000);
+
+    this.serverStatusToShow = Math.random() > 0.5 ? 'online' : 'offline';
+
+    if (this.serverStatusToShow === 'offline') {
+      this.onlineServerStatus = false;
+    } else {
+      this.onlineServerStatus = true;
+    }
+
   }
   sendUserInput(event: Event) {
     this.userNameGotten = (<HTMLInputElement>event.target).value.toString();
@@ -54,6 +70,14 @@ export class AppComponent {
       return false;
     }
     // return this.successfulEnter = true;
+  }
+
+  getColor() {
+    if ( this.successfulEnter === true) {
+        return 'green';
+    } else {
+      return 'red';
+    }
   }
   seeTheUserInputs() {
     return this.userNameGotten.concat(this.passwordGotten.toString());
